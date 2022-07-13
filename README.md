@@ -70,15 +70,13 @@ The main objective of this applicaion is to allow users to know top movies, now 
         ```
 Congratulations, the appliction should be running perfectly
 
+<p float="left">
 
 
-![Screenshot_2022-07-13-17-28-31-577_com.moviesapp.jpg](https://user-images.githubusercontent.com/63504895/178773514-f39a6e8a-5a8c-4264-a5b8-e5f33f183f3f.jpg)
+<img src="https://user-images.githubusercontent.com/63504895/178773514-f39a6e8a-5a8c-4264-a5b8-e5f33f183f3f.jpg" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/63504895/178772983-4ad0c289-86ea-4d5b-9d96-17032f3012ed.jpg" width="200" height="400" />
 
-![Screenshot_2022-07-13-17-29-16-229_com.moviesapp.jpg](https://user-images.githubusercontent.com/63504895/178772983-4ad0c289-86ea-4d5b-9d96-17032f3012ed.jpg)
+<img src="https://user-images.githubusercontent.com/63504895/178772868-a77ce8d1-a0cc-4b39-90cc-2c56bae16da5.jpg" width="200" height="400" />
+<img src="https://user-images.githubusercontent.com/63504895/178772627-9b8cca18-8b2f-4d15-8c3c-41844af87b89.jpg" width="200" height="400" />
 
-![Screenshot_2022-07-13-17-29-21-253_com.moviesapp.jpg](https://user-images.githubusercontent.com/63504895/178772868-a77ce8d1-a0cc-4b39-90cc-2c56bae16da5.jpg)
-
-![Screenshot_2022-07-13-17-29-24-596_com.moviesapp.jpg](https://user-images.githubusercontent.com/63504895/178772627-9b8cca18-8b2f-4d15-8c3c-41844af87b89.jpg)
-
-
-
+</p>
