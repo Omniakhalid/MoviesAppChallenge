@@ -63,6 +63,11 @@ The main objective of this applicaion is to allow users to know top movies, now 
         ```
         npx react-native run-android
         ```
-
+    * Run on IOS
+      
+        ```
+        npx react-native run-ios
+        ```
+Congratulations, the appliction should be running perfectly
 
 
