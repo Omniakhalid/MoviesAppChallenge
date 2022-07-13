@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import SearchBar from '../components/SearchBar/SearchBar';
 import {View, Text, FlatList, StyleSheet} from 'react-native';
 import useMovies from '../hooks/useMovies';
@@ -14,6 +14,7 @@ const HomeScreen = () => {
   const handleChange = option => setFilterOption(option);
   const {data, isLoading, isSuccess} = useMovies(filterOption);
   const [search, setSearch] = useState('');
+  const [click, setClicked] = useState(false);
   const {SearchData} = useSearch(search);
   const [favorites, setFavorites] = useState([]);
   const handleSearch = e => setSearch(e);
@@ -22,22 +23,18 @@ const HomeScreen = () => {
       await AsyncStorage.setItem('@Favorites', JSON.stringify(items));
     } catch (error) {}
   };
-
-  // const addFavoriteMovie = movie => {
-  //   const fav = favorites.filter(f => f.id !== movie.id);
-  //   const newFavoriteList = [...fav, movie];
-  //   setFavorites(newFavoriteList);
-  //   //setClick(true);
-  //   saveToLocalStorage(newFavoriteList);
-  //   console.log(newFavoriteList);
-  // };
-
-  const addFavoriteMovie = movie => {
-    if (!favorites.includes(movie)) {
-      const newFavoriteList = [...favorites, movie];
-      setFavorites(newFavoriteList);
-      saveToLocalStorage(newFavoriteList);
-    }
+  const fetchMovies = async () => {
+    let favoriteMovies = await AsyncStorage.getItem('@Favorites');
+    setFavorites(JSON.parse(favoriteMovies));
+  };
+  useEffect(() => {
+    fetchMovies().catch(console.error);
+  }, []);
+  const addFavoriteMovie = async movie => {
+    const fav = favorites.filter(f => f.id !== movie.id);
+    const newFavoriteList = [...fav, movie];
+    setFavorites(newFavoriteList);
+    saveToLocalStorage(newFavoriteList);
   };
 
   return (
@@ -55,7 +52,11 @@ const HomeScreen = () => {
               keyExtractor={item => item.id}
               renderItem={({item}) => {
                 return (
-                  <MovieItem MovieItm={item} MovieClicked={addFavoriteMovie} />
+                  <MovieItem
+                    MovieItm={item}
+                    MovieClicked={addFavoriteMovie}
+                    Clicked={favorites.find(f => f.id === item.id)}
+                  />
                 );
               }}
             />

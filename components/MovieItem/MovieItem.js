@@ -3,7 +3,7 @@ import React from 'react';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {styles} from './MovieItemStyle';
 import MoviesAPI from '../../constants/MoviesAPI';
-const MovieItem = ({MovieItm, MovieClicked, Clicked = false}) => {
+const MovieItem = ({MovieItm, MovieClicked, Clicked}) => {
   const FavoriteMovieAdded = () => MovieClicked(MovieItm);
   return (
     <View style={styles.Container}>
@@ -14,7 +14,7 @@ const MovieItem = ({MovieItm, MovieClicked, Clicked = false}) => {
         />
         <View style={styles.MovieRow}>
           <Text style={styles.MovieTitle}>
-            {MovieItm.title.length > 37
+            {MovieItm?.title.length > 37
               ? (MovieItm.title = MovieItm.title.substring(0, 33))
               : MovieItm.title}
           </Text>

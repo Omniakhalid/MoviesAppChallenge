@@ -15,8 +15,16 @@ const Main = () => {
         drawerInactiveTintColor: Colors.textColor,
         drawerStyle: {backgroundColor: Colors.DarkGray},
       }}>
-      <Drawer.Screen name="Home" component={HomeScreen} />
-      <Drawer.Screen name="Favorites" component={FavoritesScreen} />
+      <Drawer.Screen
+        name="Home"
+        component={HomeScreen}
+        options={{unmountOnBlur: true}}
+      />
+      <Drawer.Screen
+        name="Favorites"
+        component={FavoritesScreen}
+        options={{unmountOnBlur: true}}
+      />
     </Drawer.Navigator>
   );
 };

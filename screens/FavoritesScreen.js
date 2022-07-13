@@ -6,13 +6,15 @@ import EmptyList from '../components/EmptyList/EmptyList';
 import Colors from '../constants/Colors';
 const FavoritesScreen = () => {
   const [favorites, setFavorites] = useState([]);
-
   const fetchMovies = async () => {
     let favoriteMovies = await AsyncStorage.getItem('@Favorites');
     favoriteMovies = JSON.parse(favoriteMovies);
     setFavorites(favoriteMovies);
   };
-  useEffect(() => fetchMovies().catch(console.error));
+  useEffect(() => {
+    fetchMovies().catch(console.error);
+    console.log('++++++++++++++++++++ favorite');
+  }, []);
   const removeMovie = async movie => {
     try {
       let alteredMovies = favorites.filter(e => e.id !== movie.id);
