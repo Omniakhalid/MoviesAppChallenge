@@ -70,6 +70,8 @@ The main objective of this applicaion is to allow users to know top movies, now 
         ```
 Congratulations, the appliction should be running perfectly
 
+https://user-images.githubusercontent.com/63504895/178784308-611e8407-993e-474d-8da3-6fc8fa7b9b37.mp4
+
 <p float="left">
 <img src="https://user-images.githubusercontent.com/63504895/178773514-f39a6e8a-5a8c-4264-a5b8-e5f33f183f3f.jpg" width="200" height="400" />
 <img src="https://user-images.githubusercontent.com/63504895/178772983-4ad0c289-86ea-4d5b-9d96-17032f3012ed.jpg" width="200" height="400" />
