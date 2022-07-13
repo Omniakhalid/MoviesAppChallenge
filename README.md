@@ -53,7 +53,7 @@ The main objective of this applicaion is to allow users to know top movies, now 
     * the FavoriteScreen Contains 1 Component <br/>
                1- FlatList with FavoriteItem Data if we have a FavoriteList else EmptyList Component <br/>
                
-  ##  2- How To Run The App
+  ##  3- How To Run The App
   
       
         npm install 
